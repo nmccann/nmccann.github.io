@@ -23,6 +23,6 @@ struct Website: Publish.Website {
 
 // This will generate your website using the built-in Foundation theme:
 try Website().publish(withTheme: .foundation,
-                      deployedUsing: .gitHub("https://github.com/nmccann/nmccann.github.io",
-                                             branch: "generated",
+                      deployedUsing: .gitHub("nmccann/nmccann.github.io",
+                                             branch: "gh-pages",
                                              useSSH: true))
