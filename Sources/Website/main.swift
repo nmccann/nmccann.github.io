@@ -2,27 +2,23 @@ import Foundation
 import Publish
 import Plot
 
-// This type acts as the configuration for your website.
 struct Website: Publish.Website {
-    enum SectionID: String, WebsiteSectionID {
-        // Add the sections that you want your website to contain here:
-        case posts
-    }
+  enum SectionID: String, WebsiteSectionID {
+    case projects
+  }
 
-    struct ItemMetadata: WebsiteItemMetadata {
-        // Add any site-specific metadata that you want to use here.
-    }
+  struct ItemMetadata: WebsiteItemMetadata {
+  }
 
-    // Update these properties to configure your website:
-    var url = URL(string: "https://your-website-url.com")!
-    var name = "Website"
-    var description = "A description of Website"
-    var language: Language { .english }
-    var imagePath: Path? { nil }
+  var url = URL(string: "https://noahmccann.com")!
+  var name = "Noah McCann"
+  var description = "Noah McCann – Father, iOS Developer, Gamer and More"
+  var language: Language { .english }
+  var imagePath: Path? { "images/logo.png" }
+  var favicon: Favicon? { .init() }
 }
 
-// This will generate your website using the built-in Foundation theme:
-try Website().publish(withTheme: .foundation,
+try Website().publish(withTheme: .noah,
                       deployedUsing: .gitHub("nmccann/nmccann.github.io",
                                              branch: "gh-pages",
                                              useSSH: true))
