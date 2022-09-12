@@ -2,6 +2,7 @@ import Foundation
 import Publish
 import Plot
 import CNAMEPublishPlugin
+import YoutubePublishPlugin
 
 struct Website: Publish.Website {
   enum SectionID: String, WebsiteSectionID {
@@ -37,5 +38,5 @@ try Website().publish(withTheme: .noah,
                       deployedUsing: .gitHub("nmccann/nmccann.github.io",
                                              branch: "gh-pages",
                                              useSSH: true),
-                      plugins: [.addCNAME()])
+                      plugins: [.addCNAME(), .youtube()])
 

@@ -2,34 +2,37 @@ import Foundation
 import Publish
 import Plot
 
-struct ItemList<Site: Publish.Website>: Component {
+struct ItemList: Component {
+  typealias Site = Website
   var items: [Item<Site>]
   var site: Site
 
   var sortedItems: [Item<Site>] {
-    items.sorted { left, right in
-      guard let leftMetadata = left.metadata as? Website.ItemMetadata,
-              let rightMetadata = right.metadata as? Website.ItemMetadata else {
-        return true
-      }
-
-      return (leftMetadata.priority ?? 0) > (rightMetadata.priority ?? 0)
+    items.sorted {
+      return ($0.metadata.priority ?? 0) > ($1.metadata.priority ?? 0)
     }
   }
 
   var body: Component {
     List(sortedItems) { item in
-      let metadata = item.metadata as? Website.ItemMetadata
-
       return Article {
         Div {
-          H1(Link(item.title, url: item.path.absoluteString)).class("left")
-          if let url = metadata?.gitHubLink {
-            Link("View On GitHub", url: url).class("right")
-          } else if let url = metadata?.officialLink {
-            Link("View Official Site", url: url).class("right")
+          H1(Link(item.title, url: item.path.absoluteString))
+            .attribute(named: "style", value: "margin-right:10px;")
+
+          if let url = item.metadata.gitHubLink {
+            Span(" – ")
+              .attribute(named: "style", value: "margin-right:10px;")
+            Link("View On GitHub", url: url)
+              .attribute(named: "style", value: "margin-right:10px;")
+          } else if let url = item.metadata.officialLink {
+            Span(" – ")
+              .attribute(named: "style", value: "margin-right:10px;")
+            Link("View Official Site", url: url)
+              .attribute(named: "style", value: "margin-right:10px;")
           }
-        }.class("splitscreen")
+        }.attribute(named: "style", value: "display:flex;align-items:center;margin-bottom:20px")
+
         ItemTagList(item: item, site: site)
         Paragraph(item.description)
       }

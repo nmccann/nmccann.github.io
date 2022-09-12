@@ -70,7 +70,25 @@ extension Theme where Site == Website {
             header(for: item.sectionID, in: context)
             Wrapper {
               Article {
+                Div {
+                  H1(Link(item.title, url: item.path.absoluteString))
+                    .attribute(named: "style", value: "margin-bottom:0px; margin-right:10px;")
+
+                  if let url = item.metadata.gitHubLink {
+                    Span(" – ")
+                      .attribute(named: "style", value: "margin-right:10px;")
+                    Link("View On GitHub", url: url)
+                      .attribute(named: "style", value: "margin-right:10px;")
+                  } else if let url = item.metadata.officialLink {
+                    Span(" – ")
+                      .attribute(named: "style", value: "margin-right:10px;")
+                    Link("View Official Site", url: url)
+                      .attribute(named: "style", value: "margin-right:10px;")
+                  }
+                }.attribute(named: "style", value: "display:flex;align-items:center;margin-bottom:20px")
+
                 Div(item.content.body).class("content")
+
                 ItemTagList(item: item, site: context.site)
               }
             }
