@@ -12,12 +12,13 @@ let package = Package(
     ],
     dependencies: [
       .package(name: "Publish", url: "https://github.com/schrismartin/publish.git", .branch("master")),
-      .package(name: "CNAMEPublishPlugin", url: "https://github.com/SwiftyGuerrero/CNAMEPublishPlugin", from: "0.1.0")
+      .package(name: "CNAMEPublishPlugin", url: "https://github.com/SwiftyGuerrero/CNAMEPublishPlugin", from: "0.1.0"),
+      .package(url: "https://github.com/tanabe1478/YoutubePublishPlugin.git", .exact("0.1.0"))
     ],
     targets: [
         .target(
             name: "Website",
-            dependencies: ["Publish", "CNAMEPublishPlugin"]
+            dependencies: ["Publish", "CNAMEPublishPlugin", "YoutubePublishPlugin"]
         )
     ]
 )

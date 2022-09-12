@@ -2,9 +2,8 @@
 officialLink: https://www.teesnap.com/
 priority: 2
 tags: Enterprise, Public, iPad, Swift, Objective-C
+title: Teesnap
 ---
-
-# Teesnap
 
 To date, Teesnap – a Golf Course Management Application – has been the longest project I was ever involved in – from 2013 to 2020. During this time I helped it grow from a nascent proof of concept, into a full fledged production application that was being used at many locations. 
 
@@ -12,7 +11,7 @@ The purpose of this application was to provide Point of Sale, Teesheet and Custo
 
 Objective-C was used for the first few years of the project, however I pushed hard for the eventual move towards a codebase that largely made use of Swift – partly to leverage Swift's improved type and compile-time safety, but also because over time we were seeing the pool of available Objective-C developers dwindle. This shift also allowed us to start incorporating a Model-View-View-Model (MVVM) architecture, along with Functional Reactive Programming (FRP, using ReactiveObjC and ReactiveSwift). 
 
-The decision to migrate towards MVVM and FRP were not taken lightly. While Objective-C to Swift represented a syntactic change, fundamentally one _could_ write Swift code very similar to it's Objective-C counterpart (though so-called "Swift-y" code is preferred). MVVM and FRP were quite a conceptual leap from the Model-View-Controller architecture we had previously used, and the imperative programming that accompanied it. As a result, I heavily researched the topic and available implementations before migrating a subset of our app's functionality, then frequently discussed the topic with other iOS developers on the project while also providing assistance on code reviews. The shift was complicated, but began to pay off when we were able to greatly simplify our poll-based syncing (and improve it's robustness). I was also incredibly happy with the FRP-based Customer Search functionality, which seamlessly hit a local Realm-persisted customer list for increased responsivenss, before making a REST API-based search that it then used to update both the UI and the Realm-persisted list. These were things that – while possible – were almost always fraught with bugs due to the complexity of the resulting multithreaded code.
+The decision to migrate towards MVVM and FRP were not taken lightly. While Objective-C to Swift represented a syntactic change, fundamentally one _could_ write Swift code very similar to it's Objective-C counterpart (though so-called "Swift-y" code is preferred). MVVM and FRP were quite a conceptual leap from the Model-View-Controller architecture we had previously used, and the imperative programming that accompanied it. As a result, I heavily researched the topic and available implementations before migrating a subset of our app's functionality, then frequently discussed the topic with other iOS developers on the project while also providing assistance on code reviews. The shift was complicated, but began to pay off when we were able to greatly simplify our poll-based syncing (and improve it's robustness). I was also incredibly happy with the FRP-based Customer Search functionality, which seamlessly hit a local Realm-persisted customer list for increased responsiveness, before making a REST API-based search that it then used to update both the UI and the Realm-persisted list. These were things that – while possible – were almost always fraught with bugs due to the complexity of the resulting multithreaded code.
 
 To further reap benefits from our move to MVVM, we began to unit test our view model layer – something which was impractical to do with the previous imperative Model-View-Controller approach. This drove great leaps in our already respectable code coverage, and helped to reinforce our understanding of MVVM and FRP, while simultaneously helping mitigate (though not eliminate) the risk of regressions going forward.
 
