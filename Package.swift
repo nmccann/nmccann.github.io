@@ -11,12 +11,13 @@ let package = Package(
         )
     ],
     dependencies: [
-      .package(name: "Publish", url: "https://github.com/schrismartin/publish.git", .branch("master"))
+      .package(name: "Publish", url: "https://github.com/schrismartin/publish.git", .branch("master")),
+      .package(name: "CNAMEPublishPlugin", url: "https://github.com/SwiftyGuerrero/CNAMEPublishPlugin", from: "0.1.0")
     ],
     targets: [
         .target(
             name: "Website",
-            dependencies: ["Publish"]
+            dependencies: ["Publish", "CNAMEPublishPlugin"]
         )
     ]
 )

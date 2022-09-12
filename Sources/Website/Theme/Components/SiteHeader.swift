@@ -4,7 +4,8 @@ import Plot
 
 struct SiteHeader<Site: Publish.Website>: Component {
   var context: PublishingContext<Site>
-  var selectedSelectionID: Site.SectionID?
+  var selectedSectionID: Site.SectionID?
+  @ComponentBuilder var trailingContent: ContentProvider
 
   var body: Component {
     Header {
@@ -16,7 +17,7 @@ struct SiteHeader<Site: Publish.Website>: Component {
                 .class("left")
                 .class("site-name")
 
-              socialLinks.class("right")
+              trailingContent().class("right")
             }
             .class("splitscreen")
           }.class("left")
@@ -26,7 +27,7 @@ struct SiteHeader<Site: Publish.Website>: Component {
             }
           }.class("right")
         }.class("splitscreen")
-      }.class("something")
+      }
     }
   }
 }
@@ -56,21 +57,8 @@ private extension SiteHeader {
         }
 
         return Link(title, url: url)
-          .class(sectionID == selectedSelectionID ? "selected" : "")
+          .class(sectionID == selectedSectionID ? "selected" : "")
       }
     }
-  }
-
-  @ComponentBuilder
-  var socialLinks: Component {
-    let iconSize = 44
-    let items = [("/images/social/github.svg", "https://github.com/nmccann", iconSize, "GitHub"),
-                 ("/images/social/linkedin.svg", "https://www.linkedin.com/in/noahmccann", iconSize, "LinkedIn"),
-                 ("/images/social/stackoverflow.svg", "https://stackoverflow.com/users/1718458/arkcann", iconSize, "StackOverflow")]
-
-    List(items) {
-      ImageLink(url: $0.0, destinationUrl: $0.1, width: $0.2, height: $0.2, description: $0.3)
-    }
-    .class("social-list")
   }
 }
