@@ -3,7 +3,7 @@ gitHubLink: https://github.com/nmccann/nmccann.github.io
 priority: 3
 tags: Open Source, Web, Swift 
 title: Portfolio Website
-subtitle: Statically Generated Swift-based Website
+description: Statically Generated Swift-based Website
 start: 2022
 end: Present
 ---  

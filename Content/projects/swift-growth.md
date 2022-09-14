@@ -3,7 +3,7 @@ gitHubLink: https://github.com/nmccann/swift-growth
 priority: 4
 tags: Open Source, Mac, Swift
 title: Swift Growth
-subtitle: Natural Selection Simulator
+description: Natural Selection Simulator
 start: 2021
 end: Present
 ---

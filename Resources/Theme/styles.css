@@ -59,12 +59,17 @@ nav li a.selected {
 }
 
 h1 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 2em;
 }
 
 h2 {
-  margin: 20px 0;
+  margin: 10px 0;
+}
+
+h4 {
+  font-size: 0.8em;
+  margin-bottom: 10px;
 }
 
 p {
@@ -121,6 +126,38 @@ a {
 
 .item-list p {
   margin-bottom: 0;
+}
+
+.item-card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-card p {
+  margin-bottom: 10px;
+}
+
+.item-title {
+  display: flex;
+  align-items: center;
+  flex-basis: 100%;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.item-title div {
+  display: flex;
+  align-items: inherit;
+  justify-content: space-between;
+}
+
+.item-title h1 {
+  margin-bottom: 0px;
+}
+
+.item-title h4 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
 }
 
 .tag-list {

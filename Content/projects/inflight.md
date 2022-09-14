@@ -2,7 +2,7 @@
 priority: 0
 tags: Enterprise, Internal, iPhone, iPad, Objective-C
 title: InFlight
-subtitle: Airline Point Of Sale
+description: Airline Point Of Sale
 start: 2012
 end: 2013
 ---

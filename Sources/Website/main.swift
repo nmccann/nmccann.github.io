@@ -13,6 +13,8 @@ struct Website: Publish.Website {
     var gitHubLink: String?
     var officialLink: String?
     var priority: Int?
+    var start: String?
+    var end: String?
   }
 
   struct Social {

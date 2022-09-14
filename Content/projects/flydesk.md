@@ -2,7 +2,7 @@
 priority: 1
 tags: Enterprise, Internal, iPad, Objective-C
 title: FlyDesk
-subtitle: Airline Point Of Sale/Document Storage
+description: Airline Point Of Sale/Document Storage
 start: 2013
 end: 2013
 --- 

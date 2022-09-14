@@ -3,12 +3,12 @@ officialLink: https://www.teesnap.com/
 priority: 2
 tags: Enterprise, Public, iPad, Swift, Objective-C
 title: Teesnap
-subtitle: Golf Course Point Of Sale and Management
+description: Golf Course Point Of Sale and Management
 start: 2013
 end: 2020
 ---
 
-To date, Teesnap – a Golf Course Management Application – has been the longest project I was ever involved in – from 2013 to 2020. During this time I helped it grow from a nascent proof of concept, into a full fledged production application that was being used at many locations. 
+During my time on Teesnap, I helped it grow from a nascent proof of concept into a full fledged production application that was being used at dozens of locations. 
 
 The purpose of this application was to provide Point of Sale, Teesheet and Customer Management capabilities to golf course operators and employees, in a mobile form factor that would allow for business to be done regardless of physical location across the golf course's grounds. Over time, the application also grew to fulfill additional roles such as Food and Beverage.
 
