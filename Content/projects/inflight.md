@@ -3,8 +3,8 @@ priority: 0
 tags: Enterprise, Internal, iPhone, iPad, Objective-C
 title: InFlight
 subtitle: Airline Point Of Sale
-startYear: 2012
-endYear: 2013
+start: 2012
+end: 2013
 ---
 
 InFlight was an early iOS application that gave flight attendants Point of Sale capabilities even when in the air. This required offline functionality and a novel bluetooth syncing mechanism that ensured one particular device collected all of the relevant information from the many that might be used on a single plane. This particular device was then tasked with uploading that information once connected to the internet (at the time, internet connectivity on board was rare and expensive, nowadays it's seemingly just expensive).

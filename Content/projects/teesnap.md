@@ -3,6 +3,9 @@ officialLink: https://www.teesnap.com/
 priority: 2
 tags: Enterprise, Public, iPad, Swift, Objective-C
 title: Teesnap
+subtitle: Golf Course Point Of Sale and Management
+start: 2013
+end: 2020
 ---
 
 To date, Teesnap – a Golf Course Management Application – has been the longest project I was ever involved in – from 2013 to 2020. During this time I helped it grow from a nascent proof of concept, into a full fledged production application that was being used at many locations. 
@@ -22,3 +25,24 @@ Outside of the day-to-day programming challenges that I faced, I also took on a 
 On the subject of releases, I was responsible for managing our CI pipeline, which made heavy use of Fastlane and Ruby scripts to replace the older (more difficult to maintain) Bash scripts that the project began with. 
 
 Examples of the UI and functionality (much of which is as it was during my time on the project), can be found at the official site [here](https://www.teesnap.com/why-teesnap/point-of-sale/), and [here](https://www.teesnap.com/why-teesnap/tee-sheets/), with the last feature I worked on – Food and Beverage – found [here](https://www.teesnap.com/why-teesnap/food-and-beverage/).
+
+### Technologies Used
+
+**iOS**
+
+* Swift/Objective-C (UIKit)
+* Cocoapods
+* Fastlane (Ruby script) for build/release management
+* ReactiveSwift/Promises for concurrency
+* MVVM
+* Autolayout
+* Kiwi, Quick/Nimble for Tests
+* Realm for Persistence
+
+**Backend**
+
+* Java (Spring Framework)
+* JUnit
+* Karate/JMeter for Integration tests
+* Hibernate/MySql for Persistence
+* Docker Container

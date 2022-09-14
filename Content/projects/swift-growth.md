@@ -3,6 +3,9 @@ gitHubLink: https://github.com/nmccann/swift-growth
 priority: 4
 tags: Open Source, Mac, Swift
 title: Swift Growth
+subtitle: Natural Selection Simulator
+start: 2021
+end: Present
 ---
 
 I've always had a fascination for neural networks and evolutionary processes in generall, so when I stumbled upon [this video](https://www.youtube.com/watch?v=N3tRFayqVtk) by [David Miller](https://github.com/davidrmiller) and his accompanying [biosim4](https://github.com/davidrmiller/biosim4) project, I was encouraged to finally take the opportunity to understand how these things worked at the implementation level.
@@ -19,6 +22,13 @@ Once I had everything working (for the most part), I took the opportunity to "Sw
 
 > youtube https://youtu.be/xuBYo07KvsA
 
-The above example challenges each individual to get to the far right quarter of the grid – only those who make it pass their genes to the next generation. At the beginning, they have only a ~20% survival rate, with this stabilizing around a ~30% survival rate. That isn't a great improvement, and illustrates a few things: In this particular challenge, luck is a huge factor. Where an individual spawns has the biggest influence on whether they live or die. This also highlights the impact of initial parameters – if the environment allows for success essentially **at random**, the population will be unlikely to develop complex approaches to overcome the challenges they face. That doesn't mean they don't develop at all – as we see, a gene for "moving right" becomes common in the population, but they don't really learn how to bypass the wall if it's in their way.
+The above example challenges each individual to get to the far right quarter of the grid – only those who make it pass their genes to the next generation. At the beginning, they have only a ~20% survival rate, with this stabilizing around a ~30% survival rate. That isn't a great improvement, and illustrates a few things: In this particular challenge, luck is a huge factor. Where an individual spawns has the biggest influence on whether they live or die. This also highlights the impact of initial parameters – if the environment allows for success essentially _at random_, the population will be unlikely to develop complex approaches to overcome the challenges they face. That doesn't mean they don't develop at all – as we see, a gene for "moving right" becomes common in the population, but they don't really learn how to bypass the wall if it's in their way.
 
-One of my big takeaways from working on this project was just how critical the right environment was to developing interesting characteristics in the population. I really enjoy trying to break down "why" they didn't develop in the way I thought that they would.  
+One of my big takeaways from working on this project was just how critical the right environment was to developing interesting characteristics in the population. I really enjoy trying to break down "why" they didn't develop in the way I thought that they would.
+
+### Technologies Used
+
+* Swift
+* SpriteKit (for rendering of simulation)
+* SwiftUI (for UI elements)
+* Swift Package Manager
