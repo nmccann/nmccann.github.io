@@ -1,9 +1,10 @@
-// swift-tools-version:5.2
+// swift-tools-version:5.6
 
 import PackageDescription
 
 let package = Package(
     name: "Website",
+    platforms: [.macOS(.v12)],
     products: [
         .executable(
             name: "Website",
@@ -11,12 +12,12 @@ let package = Package(
         )
     ],
     dependencies: [
-      .package(name: "Publish", url: "https://github.com/schrismartin/publish.git", .branch("master")),
-      .package(name: "CNAMEPublishPlugin", url: "https://github.com/SwiftyGuerrero/CNAMEPublishPlugin", from: "0.1.0"),
-      .package(url: "https://github.com/tanabe1478/YoutubePublishPlugin.git", .exact("0.1.0"))
+      .package(url: "https://github.com/JohnSundell/Publish", exact: "0.9.0"),
+      .package(url: "https://github.com/SwiftyGuerrero/CNAMEPublishPlugin", branch: "master"),
+      .package(url: "https://github.com/tanabe1478/YoutubePublishPlugin", exact: "1.0.1")
     ],
     targets: [
-        .target(
+        .executableTarget(
             name: "Website",
             dependencies: ["Publish", "CNAMEPublishPlugin", "YoutubePublishPlugin"]
         )
